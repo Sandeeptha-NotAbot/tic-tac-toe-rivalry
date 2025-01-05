@@ -1,0 +1,105 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818; /* Dark background color */
+    color: #eaeaea;  /* Light text color for dark theme */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* Title styling */
+  h1 {
+    font-size: 2.5em;
+    color: #f4f4f4;  /* Light color for the title */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* General styles for the game board and cells */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cell:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style for Max Verstappen's cells */
+  .cell.max {
+    background-color: #1e3c72; /* Red Bull color */
+    color: #ff7f00;  /* Verstappen's color (orange) */
+    background-image: url('assets/verstappen_helmet.png'); /* Path to the image in assets */
+    background-size: cover;
+  }
+  
+  /* Style for Lewis Hamilton's cells */
+  .cell.lewis {
+    background-color: #00d2be; /* Mercedes color */
+    color: #000000;  /* Black for Hamilton */
+    background-image: url('assets/hamilton_helmet.png'); /* Path to the image in assets */
+    background-size: cover;
+  }
+  
+  /* Style for the status message (player's turn) */
+  #game-status {
+    text-align: right; /* Aligns the text to the right */
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-right: 20px; /* Adds space to the right edge */
+  }
+  
+  
+  /* Style for the reset button */
+  #restartBtn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center button */
+  }
+  
+  #restartBtn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Optional: Make the game container more centered */
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
